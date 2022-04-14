@@ -15,11 +15,22 @@ Para ser, então, reativo o software precisa ser Responsivo, Resiliente, Elásti
 Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses e Observables.
 
 
-Promisse:
+### Promisse:
 ![](assets/promise1.png)
-Na promise, o valor é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
+Na promise, o dado é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png)
+
+Resultado do código acima no console:
+![](assets/Captura%20de%20tela%202022-04-14%20150348.png)
+
+### Observable:
+Para os observables, o dado é lançado e recepcionado da seguinte maneira:
+![](assets/obs1.png)
+
+Resultado no console:
+
+![](assets/obs2.png)
 
 ## Compartilhamento de estado
 A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).

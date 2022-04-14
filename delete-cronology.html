@@ -12,12 +12,13 @@
     <script>
         const { Observable } = rxjs;
 
-        const promise = new Promise( (resolve ) => {
-            resolve("I'm resolved");
-        })
+        const observable = Observable.create((observer) => {
+            observer.next("valor a ser streamado")
+            observer.next(1)
+        }) 
         
-        promise.then( ( value) => console.log(value));
-
+        observable.subscribe( value => console.log(value))
+        
     </script>
 </body>
 </html>
