@@ -19,7 +19,10 @@ Todos os conceitos serão apresentados com base na diferenciação de dois recur
 ![](assets/promise1.png)
 Na promise, o dado é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
 
-![](https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png)
+<img src="https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;" > 
 
 Resultado do código acima no console:
 
@@ -31,7 +34,10 @@ Para os observables, o dado é lançado e recepcionado da seguinte maneira:
 
 Resultado no console:
 
-![](assets/obs2.png)
+<img src="assets/obs2.png" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;" > 
 
 > 💡 **Tip:** Perceba que os observables podem lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma única vez.
 
@@ -48,7 +54,11 @@ A promisse possui estado compartilhado com suas 'inscrições', já o Observable
 
 
 O cancelamento de promise só pode ser feito com o uso de algiumas bibliotecas. Mas, nativamente, o observable, possui este comportamento para o cancelamento: 
-![](assets/obs3.png)
+
+<img src="assets/obs3.png" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;" > 
 
 Nesse caso, se não houvesse o cancelamento através do unsubscribe(), os avlores seriam enviados infinitamente, mas, após 5 segundos, o observable é cancelado e, portanto, o envio é pausado. Veja:
 
