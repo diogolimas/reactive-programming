@@ -25,6 +25,7 @@ Na promise, o valor é lançado no momento em que a ela é resolvida e, então, 
 A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).
 
 
+
 ## Cancelamento e cronologia
 
 | Promisse      | Observable  |
