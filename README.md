@@ -33,7 +33,7 @@ Resultado no console:
 
 ![](assets/obs2.png)
 
-> 💡 **Tip:** Perceba que os observables pode-se lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma por vez.
+> 💡 **Tip:** Perceba que os observables podem lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma única vez.
 
 ## Compartilhamento de estado
 A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).
@@ -47,7 +47,12 @@ A promisse possui estado compartilhado com suas 'inscrições', já o Observable
 | assíncrono    |  síncrono ou assíncrono |
 
 
+O cancelamento de promise só pode ser feito com o uso de algiumas bibliotecas. Mas, nativamente, o observable, possui este comportamento para o cancelamento: 
+![](assets/obs3.png)
 
+Nesse caso, se não houvesse o cancelamento através do unsubscribe(), os avlores seriam enviados infinitamente, mas, após 5 segundos, o observable é cancelado e, portanto, o envio é pausado. Veja:
+
+![](assets/cancelamento-obs.gif)
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)

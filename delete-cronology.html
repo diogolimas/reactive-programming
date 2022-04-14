@@ -13,12 +13,20 @@
         const { Observable } = rxjs;
 
         const observable = Observable.create((observer) => {
-            observer.next("valor a ser streamado")
-            observer.next(1)
+            let i = 0;
+            const interval = setInterval(() => {
+                observer.next(i++);
+            }, 1000);
+
+            return () => clearInterval(interval);
         }) 
         
-        observable.subscribe( value => console.log(value))
-        
+        const subscriber = observable.subscribe( num => console.log(num))
+    
+        setTimeout(() => {
+            subscriber.unsubscribe();        
+        }, 5000);
+
     </script>
 </body>
 </html>
