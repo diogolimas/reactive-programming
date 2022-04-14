@@ -26,7 +26,7 @@ Na promise, o dado é lançado no momento em que a ela é resolvida e, então, s
 
 Resultado do código acima no console:
 
-![](assets/Captura%20de%20tela%202022-04-14%20150348.png)
+<img src="assets/Captura%20de%20tela%202022-04-14%20150348.png" width="250" style="display: block; margin: 0 auto" >
 
 ### Observable:
 Para os observables, o dado é lançado e recepcionado da seguinte maneira:
@@ -34,10 +34,8 @@ Para os observables, o dado é lançado e recepcionado da seguinte maneira:
 
 Resultado no console:
 
-<img src="assets/obs2.png" style="  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;" > 
+<img src="assets/obs2.png" style="display: block; margin: 0 auto"
+ > 
 
 > 💡 **Tip:** Perceba que os observables podem lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma única vez.
 
