@@ -22,6 +22,7 @@ Na promise, o dado é lançado no momento em que a ela é resolvida e, então, s
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png)
 
 Resultado do código acima no console:
+
 ![](assets/Captura%20de%20tela%202022-04-14%20150348.png)
 
 ### Observable:
@@ -31,6 +32,8 @@ Para os observables, o dado é lançado e recepcionado da seguinte maneira:
 Resultado no console:
 
 ![](assets/obs2.png)
+
+> 💡 **Tip:** Perceba que os observables pode-se lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma por vez.
 
 ## Compartilhamento de estado
 A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).
@@ -42,6 +45,7 @@ A promisse possui estado compartilhado com suas 'inscrições', já o Observable
 | Promisse      | Observable  |
 | ----------- | ----------- |
 | assíncrono    |  síncrono ou assíncrono |
+
 
 
 
