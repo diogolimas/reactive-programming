@@ -8,10 +8,28 @@ Nesse resumo, apresentarei algumas definições para programação reativa, cita
 Em termos práticos, um fluxo de dados na programação reativa será propagada para os demais componentes de maneira estrutural.
 
 
-Para ser, então, reativo o software precisa ser Responsivo, Resiliente, Elástico e ser 'Drivado' à mensageria.                                       
+Para ser, então, reativo o software precisa ser Responsivo, Resiliente, Elástico e ser Guiado por mensageria.                                       
 
 
-Nesse sentido, todos esses conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses e Observables.
+## Hands-on!
+Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses e Observables.
+
+
+Promisse:
+![](assets/promise1.png)
+Na promise, o valor é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
+
+![](https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png)
+
+## Compartilhamento de estado
+A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).
+
+
+## Cancelamento e cronologia
+
+| Promisse      | Observable  |
+| ----------- | ----------- |
+| assíncrono    |  síncrono ou assíncrono |
 
 
 
