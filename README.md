@@ -44,7 +44,9 @@ A promisse possui estado compartilhado com suas 'inscrições', já o Observable
 
 
 
-## Cancelamento e cronologia
+
+
+## Cancelamento
 
 | Promisse      | Observable  |
 | ----------- | ----------- |
