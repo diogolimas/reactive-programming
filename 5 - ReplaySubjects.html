@@ -1,29 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.5.5/rxjs.umd.min.js"></script>
-    <title>BehaviorSubject</title>
+    <title>ReplaySubjects</title>
 </head>
 <body>
     <script>
-        const { BehaviorSubject } = rxjs;
-        const sub = new BehaviorSubject(0);
-        sub.next(3);
-        //com o literal nas funções de next, error e complete
+        const { ReplaySubject } = rxjs;
+
+        const sub = new ReplaySubject(2);
+        sub.next(1);
+        sub.next(2);
+
         sub.subscribe({   
-            next: num => console.log('Observable 1', num),
+            next: num => console.log('Observable 1:', num),
             error: err => console.log(err),
             complete: () => console.log('observable completed')
         })
 
+        sub.next(3);
         sub.next(4);
-        sub.next(5);
 
         sub.subscribe({   
-            next: num => console.log('Observable 2', num),
+            next: num => console.log('Observable 2:', num),
             error: err => console.log(err),
             complete: () => console.log('observable completed')
         })

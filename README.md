@@ -11,11 +11,11 @@ Em termos práticos, um fluxo de dados na programação reativa será propagada 
 Para ser, então, reativo o software precisa ser Responsivo, Resiliente, Elástico e ser Guiado por mensageria.                                       
 
 
-## Hands-on!
-Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses e Observables.
+# Hands-on!
+Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses, Observables e tipos especiais de Observables.
 
 
-### Promisse:
+# Promisse:
 ![](assets/promise1.png)
 Na promise, o dado é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
 
@@ -38,14 +38,14 @@ Resultado no console:
 
 > 💡 **Tip:** Perceba que os observables podem lançar mais de um tipo de dado, já nas promises, só se resolve (lança algum dado) uma única vez.
 
-## Compartilhamento de estado
+# Compartilhamento de estado
 A promisse possui estado compartilhado com suas 'inscrições', já o Observable não. Isto é, sempre que um '.then'é chamado de uma promisse, todo o mesmo resultado é resolvido; já para os observables, sempre que há um '.subscribe' em um observável, todo o bloco é reexecutado (desde a emissão, até a recepção do dado).
 
 
 
 
 
-## Cancelamento
+# Cancelamento
 
 | Promisse      | Observable  |
 | ----------- | ----------- |
@@ -63,7 +63,7 @@ Nesse caso, se não houvesse o cancelamento através do unsubscribe(), os avlore
 
 ![](assets/cancelamento-obs.gif)
 
-## Subjects e Subscriptions
+# Subjects e Subscriptions
   
 Subscriptions são objetos de uso descartável que representam os recursos de uma subscrição. Isto é, é o objeto que armazena o que foi retornado em um *obsever.subscribe()*:
 
@@ -94,6 +94,17 @@ Para o **Observable 2**, apenas o valor 5 foi emitido, pois ele o BehaviorSubjec
 <img src="assets/behaviorsubject1.png" width="250" style="display: block; margin: 0 auto" >
 
 
+# ReplaySubject 
+
+Reemite valores antigos para novos subscritos:
+
+![](assets/replaysubject.png)
+
+Perceba que o novo subscrito, o ***Observable 2***, 
+recebeu os dois ultimos valores (3 e 4).
+
+<img src="assets/replaysubject1.png" width="400" style="display: block; margin: 0 auto" >
+
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
 -  [5 Things to Know About Reactive Programming](https://developers.redhat.com/blog/2017/06/30/5-things-to-know-about-reactive-programming#:~:text=Reactive%20programming%20is%20simply%20to,in%20a%20sequence%20over%20time)
@@ -109,3 +120,9 @@ Para o **Observable 2**, apenas o valor 5 foi emitido, pois ele o BehaviorSubjec
 - [Subscription](https://rxjs.dev/guide/subscription)
 
 - [Subject](https://rxjs.dev/guide/subject)
+  
+- [BehaviorSubject](https://www.learnrxjs.io/learn-rxjs/subjects/behaviorsubject)
+
+- [ReplaySubject](https://www.learnrxjs.io/learn-rxjs/subjects/replaysubject)
+
+- [ReplaySubject](https://www.learnrxjs.io/learn-rxjs/subjects/replaysubject)
