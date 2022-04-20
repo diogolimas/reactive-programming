@@ -65,7 +65,7 @@ Nesse caso, se não houvesse o cancelamento através do unsubscribe(), os avlore
 
 ## Subjects e Subscriptions
   
-Subscriptions são objetos de uso descartável que representam os recursos de uma subscrinção. Isto é, é o objeto que armazena o que foi retornado em um *obsever.subscribe()*:
+Subscriptions são objetos de uso descartável que representam os recursos de uma subscrição. Isto é, é o objeto que armazena o que foi retornado em um *obsever.subscribe()*:
 
 ![](assets/subscrption.png)
 
