@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.5.5/rxjs.umd.min.js"></script>
+    <title>Subjects and Subcriptions</title>
+</head>
+<body>
+    <script>
+        const { Subject } = rxjs;
+        
+        const sub = new Subject();
+
+        //com o literal nas funções de next, error e complete
+        const subscription1 = sub.subscribe({   
+            next: num => console.log('Observable',num),
+            error: err => console.log(err),
+            complete: () => console.log('observable completed')
+        })
+  
+        const subscription2 = sub.subscribe({   
+            next: num => console.log('Observable',num),
+            error: err => console.log(err),
+            complete: () => console.log('observable completed')
+        })
+
+        sub.next(1);
+        sub.next(2);
+        sub.next(3);
+
+    </script>
+</body>
+</html>

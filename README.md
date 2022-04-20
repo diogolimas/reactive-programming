@@ -63,16 +63,39 @@ Nesse caso, se não houvesse o cancelamento através do unsubscribe(), os avlore
 
 ![](assets/cancelamento-obs.gif)
 
+## Subjects e Subscriptions
+  
+Subscriptions são objetos de uso descartável que representam os recursos de uma subscrinção. Isto é, é o objeto que armazena o que foi retornado em um *obsever.subscribe()*:
+
+![](assets/subscrption.png)
+
+Com isso, com esse objeto retornado, é possível se desinscrever com base nesse objeto de uma *subscription*. Como visto acina, no tópico de CANCELAMENTO.
+
+Já os Subjects, são tipos especiais de *Observable*, onde multivalores são transmitidos para multiplos observadores. Enquanto os *Observables* são unicast (cada subiscrito tem seu proóprio observer), os subjects são multicast. Perceba:
+
+
+![](assets/subject.png)
+
+Nesse caso, apenas um subject pode ser subscrito por mais de um observer.
+
+Resultado no console: 
+
+<img src="assets/subject1.png" width="250" style="display: block; margin: 0 auto" >
+
+
+
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
 -  [5 Things to Know About Reactive Programming](https://developers.redhat.com/blog/2017/06/30/5-things-to-know-about-reactive-programming#:~:text=Reactive%20programming%20is%20simply%20to,in%20a%20sequence%20over%20time)
 -  [The Reactive Manifesto](https://www.reactivemanifesto.org/)
 -  [What is Reactive Programming](https://medium.com/@kevalpatel2106/what-is-reactive-programming-da37c1611382)
   
-- https://www.markdownguide.org/extended-syntax/
+- [Observable - ReactiveX](https://reactivex.io/documentation/observable.html)
   
-- https://reactivex.io/
+- [JWDev Treinamentos - Tudo sobre RxJS](https://www.youtube.com/watch?v=hrSYyr2sUac&list=PLJYZJYNervmPUrNb-mHh7ct8c21R8nWqn)
   
-- https://www.youtube.com/watch?v=hrSYyr2sUac&list=PLJYZJYNervmPUrNb-mHh7ct8c21R8nWqn
-  
-- https://youtu.be/OssqXGdmbAE
+- [Programação Reativa // Dicionário do Programador](https://youtu.be/OssqXGdmbAE)
+
+- [Subscription](https://rxjs.dev/guide/subscription)
+
+- [Subject](https://rxjs.dev/guide/subject)
