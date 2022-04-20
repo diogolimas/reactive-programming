@@ -83,6 +83,16 @@ Resultado no console:
 <img src="assets/subject1.png" width="250" style="display: block; margin: 0 auto" >
 
 
+# BehaviorSubject 
+
+É um tipo especial de Subject, onde é necessário um valor inicial e sempre que um novo inscrito é adicionado, o último valor é emitido. Veja:
+
+![](assets/behaviorsubject.png)
+
+Para o **Observable 2**, apenas o valor 5 foi emitido, pois ele o BehaviorSubject mantém o estado do último valor a cada nova subscrição. Veja:
+
+<img src="assets/behaviorsubject1.png" width="250" style="display: block; margin: 0 auto" >
+
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
