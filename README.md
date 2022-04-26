@@ -119,6 +119,17 @@ Perceba que, para esse caso, o valor 4 é lançado. Veja:
 
 # Operadores
 
+Operadores, em sua estrutura, são funções que produzem comportamentos diferentes aos origiais dos observables, sem, no entanto, modificálos. Eles podem ser classificados entre operadores ***Pipeable*** e ***Creation***.
+
+Nesse sentido, **Pipeable Operators** são modificadores do comportamento ou valores originais de um observable, retornando um novo observable com essas modificações. Isso representa, ainda o principal conceito de um operador, já que o primeiro Observable não foi modificado.
+Os casos mais conhecidos são *filter(...), and mergeMap(...)*.
+
+Já os ***Creation Operators***, outro tipo de operador,  
+
+
+
+
+
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
