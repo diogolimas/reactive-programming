@@ -94,7 +94,7 @@ Para o **Observable 2**, apenas o valor 5 foi emitido, pois ele o BehaviorSubjec
 <img src="assets/behaviorsubject1.png" width="250" style="display: block; margin: 0 auto" >
 
 
-# ReplaySubject 
+# ReplaySubject
 
 Reemite valores antigos para novos subscritos:
 
@@ -104,6 +104,21 @@ Perceba que o novo subscrito, o ***Observable 2***,
 recebeu os dois ultimos valores (3 e 4).
 
 <img src="assets/replaysubject1.png" width="400" style="display: block; margin: 0 auto" >
+
+
+# AsyncSubjects
+
+Apenas emite um valor quando o subject é completado. Se isso acontece, então, o último valor lançado é emitido.
+
+![](assets/asyncsubject.png)
+
+Perceba que, para esse caso, o valor 4 é lançado. Veja:
+
+<img src="assets/asyncsubject1.png" width="300" style="display: block; margin: 0 auto" >
+
+
+# Operadores
+
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
