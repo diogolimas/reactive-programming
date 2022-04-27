@@ -124,12 +124,22 @@ Operadores, em sua estrutura, são funções que produzem comportamentos diferen
 Nesse sentido, **Pipeable Operators** são modificadores do comportamento ou valores originais de um observable, retornando um novo observable com essas modificações. Isso representa, ainda o principal conceito de um operador, já que o primeiro Observable não foi modificado.
 Os casos mais conhecidos são *filter(...), and mergeMap(...)*.
 
-Já os ***Creation Operators***, outro tipo de operador,  
+Já os ***Creation Operators***, outro tipo de operador,  que cria um Observable a partir de algum tipo de dado ou conjunto previamente definido, a exemplo do caso do *of* e *from*. Veja:
 
 
+No caso do ***of***, os *n* parâmetros informados são plotados da maneira que foram enviados.
 
+![](assets/of.png)
 
+<img src="assets/of1.png" width="200" style="display: block; margin: 0 auto" >
 
+Já no caso do *from*, os parâmetros informados são estruturas de dados que são iteradas pelo subcribe. Veja:
+
+![](assets/from.png)
+
+<img src="assets/from1.png" width="200" style="display: block; margin: 0 auto" >
+
+Outros tipos de operators podem ser encontradas [na documentação do próprio rxjs](https://rxjs.dev/guide/operators). 
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
