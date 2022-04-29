@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.5.5/rxjs.umd.min.js"></script>
+
+    <title>Drag and Drop</title>
+    <style>
+        li{
+            padding: 16px;
+            cursor: pointer;
+        }
+        li:not(:last-of-type)
+        {
+            border-bottom: solid 2px #a9ffd4;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <input type="text" placeholder="País...">
+        <ul></ul>
+    </div>
+    <script>
+        const { fromEvent, ajax: {ajax} } = rxjs;
+        const { pluck, map, debounceTime, switchMap, catchError, of, distinctUntilChanged,
+            startWith } = rxjs.operators;
+
+    </script>
+</body>
+</html>
