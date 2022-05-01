@@ -1,14 +1,19 @@
 const http = require('http');
 
-http.createServer((res, req)=>{
-    res.writeHead(200, {
-        'Content-Type':'application/json',
-        'Access-Control-Allow-Origin': '*'
-    })
+http.createServer(function (req,res) {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Request-Method', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+    
+    if ( req.method === 'OPTIONS' || req.method === 'GET' ) {
+		res.writeHead(200);
+	}
 
     const matchURL = /^\/response\/(.+)\/delay\/(\d+)\/?$/
 
-    // http:localhost:3333/response/{ data: 'Hello World' }/delay/1000/
+    // http:localhost:3333/response/{ "data": "Hello World" }/delay/1000/
 
     if(!matchURL.test(req.url)) return res.end();
 
@@ -17,8 +22,8 @@ http.createServer((res, req)=>{
     const jsonResponse = JSON.parse(decodeURIComponent(response));
 
     setTimeout(() => {
-        res.write(jsonResponse);
+        res.write(JSON.stringify(jsonResponse));
         res.end();
     },  +delay);
 
-}).listen(3333)
+}).listen(3000)
