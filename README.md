@@ -16,7 +16,17 @@ Todos os conceitos serão apresentados com base na diferenciação de dois recur
 
 
 # Promisse:
-![](assets/promise1.png)
+
+```javascript
+const promise = new Promise(
+  (resolve) => {
+    resolve("I'm resolved");
+  }
+)
+
+promise.then((value) => console.log(value))
+```
+
 Na promise, o dado é lançado no momento em que a ela é resolvida e, então, se recepcionada (e não for rejeitada), no momento em que o .then() é acionada, o valor da promise é passado. Seguindo esse fluxo:
 
 <img src="https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png" style="  display: block;

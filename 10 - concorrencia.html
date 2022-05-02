@@ -21,25 +21,26 @@
 <body>
     <script>
         const { fromEvent, of, ajax: {ajax} } = rxjs;
-        const { mergeMap } = rxjs.operators;
+        const { mergeMap, pluck, exhaustMap } = rxjs.operators;
 
 
         const api = (response, delay) => ajax({
             url: `http://127.10.0.1:3000/response/${JSON.stringify(response)}/delay/${delay}/`
         })
 
-        const a = api({data: "A"}, 1000)
-        const b = api({data: "B"}, 1000)
-        const c = api({data: "C"}, 800)
-        const d = api({data: "D"}, 1800)
-        const e = api({data: "E"}, 1200)
-        const f = api({data: "F"}, 1600)
-        const g = api({data: "G"}, 2800)
-        const h = api({data: "H"}, 700)
+        const a = api({data: "A"}, 1000);
+        const b = api({data: "B"}, 1000);
+        const c = api({data: "C"}, 800);
+        const d = api({data: "D"}, 1800);
+        const e = api({data: "E"}, 1200);
+        const f = api({data: "F"}, 1600);
+        const g = api({data: "G"}, 2800);
+        const h = api({data: "H"}, 700);
 
         of(a, b, c, d, e, f, g, h)
             .pipe(
-                mergeMap(e => e)
+                mergeMap(e => e),
+                pluck('response', 'data')
             )
             .subscribe(
                 x => console.log(x),
