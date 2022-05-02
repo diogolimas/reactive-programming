@@ -20,8 +20,8 @@
 </head>
 <body>
     <script>
-        const { fromEvent, of, ajax: {ajax} } = rxjs;
-        const { mergeMap, pluck, exhaustMap } = rxjs.operators;
+        const { fromEvent, of, ajax: {ajax}, merge } = rxjs;
+        const { mergeMap, pluck, exhaustMap, combineAll } = rxjs.operators;
 
 
         const api = (response, delay) => ajax({
@@ -39,8 +39,9 @@
 
         of(a, b, c, d, e, f, g, h)
             .pipe(
-                mergeMap(e => e),
-                pluck('response', 'data')
+                mergeMap(e => e, 4),
+                pluck('response', 'data'),
+                combineAll()
             )
             .subscribe(
                 x => console.log(x),
