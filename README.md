@@ -1,7 +1,7 @@
-# Programação Reativa
+# Programação Reativa ⚛️
 Nesse resumo, apresentarei algumas definições para programação reativa, citando o próprio Manifesto Reativo, buscando remover algumas das principais dúvidas que percorrem esse campo do desenvolvimento. Além disso, ao fim, apresentarei alguns exemplos a fim de fixar essas ideias iniciais em torno do desenvovolviemto reativo. 
 
-## O que é programação reativa?
+## O que é programação reativa? 🤔
 É um modelo ou paradigma de programação orientado no fluxo de dados e propagação de mudanças. Assim, é possível expressar (notificar) dinamicamente fluxos de dados através de linguagens de programação, sendo fundamental, nesse sentido, a automática notificação (propagação) de mudanças.
 
 
@@ -22,7 +22,7 @@ margin-left: auto;
 margin-right: auto;
 width: 70%;" > 
 
-# Hands-on!
+# Hands-on! 🤾‍♂️
 Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses, Observables e tipos especiais de Observables.
 
 
@@ -161,6 +161,13 @@ Já no caso do *from*, os parâmetros informados são estruturas de dados que s�
 <img src="assets/from1.png" width="200" style="display: block; margin: 0 auto" >
 
 Outros tipos de operators podem ser encontradas [na documentação do próprio rxjs](https://rxjs.dev/guide/operators). 
+
+
+> 💡 **Obs:** para alguns exemplos, é necessário executar a api. Para fazê-lo, só é necessário, ter o node instalado e executar:
+
+```bash
+node .\api\api.js
+```
 
 ### Referências bibliográficas  
 -  [Real Time Programming: Special Purpose or General Purpose Languages [1989]](https://www-sop.inria.fr/members/Gerard.Berry/Papers/Berry-IFIP-89.pdf)
