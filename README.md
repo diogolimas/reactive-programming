@@ -10,6 +10,17 @@ Em termos práticos, um fluxo de dados na programação reativa será propagada 
 
 Para ser, então, reativo o software precisa ser Responsivo, Resiliente, Elástico e ser Guiado por mensageria.                                       
 
+# Exemplos nesse artigo (Drag and drop e cancelamento de requisições)
+
+<img src="assets/cancelamento.gif" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;" > 
+
+<img src="assets/dragandrop.gif" style="  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 70%;" > 
 
 # Hands-on!
 Todos os conceitos serão apresentados com base na diferenciação de dois recursos importantes do RxJS: Promisses, Observables e tipos especiais de Observables.
